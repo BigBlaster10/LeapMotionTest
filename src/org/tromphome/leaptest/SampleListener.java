@@ -22,7 +22,7 @@ public class SampleListener extends Listener {
     	   if(frame.hands().isEmpty()) return; 
     	   
     	   Vector v =  frame.hands().get(0).palmPosition();
-    	   MainPanel.panel.repaint();
+    	   //MainPanel.panel.repaint();
     }
     
     

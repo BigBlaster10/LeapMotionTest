@@ -5,6 +5,7 @@ import javax.swing.JFrame;
 import org.tromphome.leaptest.SampleListener;
 
 import com.leapmotion.leap.Controller;
+import com.leapmotion.leap.Gesture;
 import com.leapmotion.leap.Listener;
 
 public class MainFrame extends JFrame{
@@ -36,6 +37,7 @@ public class MainFrame extends JFrame{
 		listener = new SampleListener();
 		controller.addListener(listener);
 		controller.setPolicy(Controller.PolicyFlag.POLICY_IMAGES);
+		controller.enableGesture(Gesture.Type.TYPE_CIRCLE);
 	}
 	
 }

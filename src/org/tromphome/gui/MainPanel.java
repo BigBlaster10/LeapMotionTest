@@ -85,7 +85,7 @@ public class MainPanel extends JPanel{
  	    
 	
 		
-		
+		/*
 		for(Gesture gest : frame.gestures()){
 			Location loc = Location.fromVector(frame.fingers().fingerType(Type.TYPE_INDEX).get(0).tipPosition());
 			if(OldGesture.contains(gest.id())){
@@ -121,15 +121,15 @@ public class MainPanel extends JPanel{
 			}else{
 				new OldGesture(loc, gest.id());
 			}
-		}
+		}*/
 
 		
 		Image image = MainFrame.controller.images().get(0);
 		//System.out.println(image.data().length);
 		byte[] data = image.data();
 		
-		g2d.setColor(Color.BLACK);
-		g2d.fillRect(0, 0, image.width(), image.height());
+		//g2d.setColor(Color.BLACK);
+		//g2d.fillRect(0, 0, image.width(), image.height());
 		
 		
 		int i = 0;
@@ -143,7 +143,7 @@ public class MainPanel extends JPanel{
 				rgb = (rgb << 8) + value;
 				
 				g2d.setColor(new Color(rgb));
-				g2d.drawRect(h, w, 1, 1);
+				g2d.drawRect(h + this.getWidth()-image.width(), w, 1, 1);
 				i++;
 			}
 		}
